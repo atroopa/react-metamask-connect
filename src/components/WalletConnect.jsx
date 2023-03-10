@@ -3,9 +3,9 @@ import React, {useState} from 'react';
 const WalletConnect = () => {
   return (
 
-            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="p-10 m-8 w-[750px] bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <div>
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 dark:text-white">
                         Wallect Address
                     </h5>
                 </div>
