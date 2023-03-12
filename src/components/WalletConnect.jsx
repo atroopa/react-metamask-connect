@@ -36,8 +36,12 @@ const WalletConnect = () => {
 	};
 
 
-    window.ethereum.on('accountsChanged', connectWalletHandler);
+    const chainChangedHandler = () => {
+        window.location.reload();
+    }
 
+    window.ethereum.on('accountsChanged', connectWalletHandler);
+    window.ethereum.on('chainChanged', chainChangedHandler);
 
 
   return (
