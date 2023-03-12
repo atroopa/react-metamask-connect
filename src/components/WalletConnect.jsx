@@ -3,10 +3,10 @@ import {ethers} from 'ethers'
 
 const WalletConnect = () => {
 
-    const [erroMessage,    setErrorMessage]   = useState(null);
+    //const [erroMessage,    setErrorMessage]   = useState(null);
     const [defualtAccount, setDefualtAccount] = useState(null);
     const [userBalance,    setUserBalance]    = useState(null);
-    const [connButtonText, setConnButtonText] = useState(null);
+    //const [connButtonText, setConnButtonText] = useState(null);
 
 
     const connectWalletHandler = () => {
@@ -16,7 +16,7 @@ const WalletConnect = () => {
                     accountChangeHandler(result[0]);
                 });
         }else{
-            setErrorMessage('Install MetaMask');
+           // setErrorMessage('Install MetaMask');
         }
     }
 
@@ -31,7 +31,7 @@ const WalletConnect = () => {
 			setUserBalance(ethers.formatEther(balance));
 		})
 		.catch(error => {
-			setErrorMessage(error.message);
+			//setErrorMessage(error.message);
 		});
 	};
 
