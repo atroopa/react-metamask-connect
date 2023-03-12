@@ -49,7 +49,7 @@ const WalletConnect = () => {
             <div className="flex flex-col items-center justify-center p-10 m-8 w-[750px] bg-[#303445] rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <div>
                     <h5 className="py-5 text-5xl bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 inline-block text-transparent bg-clip-text dark:text-white">
-                        Wallect Address
+                        connect to metamask wallet
                     </h5>
                 </div>
 
