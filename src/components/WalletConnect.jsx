@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {ethers} from 'ethers'
 
 const WalletConnect = () => {
 
@@ -21,15 +22,20 @@ const WalletConnect = () => {
 
     const accountChangeHandler = (newAccount) => {
         setDefualtAccount(newAccount);
-        getUserBalance(newAccount);
+        getAccountBalance(newAccount);
     }
 
-    const getUserBalance = (address) => {
-        window.ethereum.request({method: 'eth_requestBalance', params: [address, 'latest']})
-            .then(balance => {
-                setUserBalance(balance);
-            });
-    }
+	const getAccountBalance = (account) => {
+		window.ethereum.request({method: 'eth_getBalance', params: [account, 'latest']})
+		.then(balance => {
+			setUserBalance(ethers.formatEther(balance));
+		})
+		.catch(error => {
+			setErrorMessage(error.message);
+		});
+	};
+
+    window.ethereum.on('accountsChanged', accountChangeHandler);
 
   return (
 
