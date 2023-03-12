@@ -1,6 +1,13 @@
 import React, {useState} from 'react';
 
 const WalletConnect = () => {
+
+    const [erroMessage,    setErrorMessage]   = useState(null);
+    const [defualtAccount, setDefualtAccount] = useState(null);
+    const [userBalance,    setUserBalance]    = useState(null);
+    const [connButtonText, setConnButtonText] = useState(null);
+
+
   return (
 
             <div className="flex flex-col items-center justify-center p-10 m-8 w-[750px] bg-[#303445] rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
