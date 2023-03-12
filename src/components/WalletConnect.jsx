@@ -26,7 +26,7 @@ const WalletConnect = () => {
     }
 
 	const getAccountBalance = (account) => {
-		window.ethereum.request({method: 'eth_getBalance', params: [account, 'latest']})
+		window.ethereum.request({method: 'eth_getBalance', params: [account, "latest"]})
 		.then(balance => {
 			setUserBalance(ethers.formatEther(balance));
 		})
@@ -35,7 +35,10 @@ const WalletConnect = () => {
 		});
 	};
 
-    window.ethereum.on('accountsChanged', accountChangeHandler);
+
+    window.ethereum.on('accountsChanged', connectWalletHandler);
+
+
 
   return (
 
